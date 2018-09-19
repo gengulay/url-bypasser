@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+
+  <title>Torjackan url bypasser</title>
+  <meta name="description" content="Torjackan tool">
+  <meta name="gen gulay" content="SitePoint">
+
+  <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+<div ng-controller="torjackanController">
+  <div class="container">
+
+
+      <div class="form-group">
+        <label for="url">URL:</label>
+        <textarea  class="form-control" rows="10" cols="100" id="url" ng-model="name"> </textarea>
+      </div>
+
+      <div class="col-md-12 text-center">
+        <button id="btor" class="btn btn-danger" type="button" ng-click="torjack()"> Torjack!! </button>
+      </div>
+
+    <div class="form-group">
+      <label for="result">Result:</label>
+      <textarea class="form-control" rows="15" cols="100" id="result">{{result | lowercase}} </textarea>
+    </div>
+
+    <p ng-bind="result"> </p>
+
+  </div>
+</div>
+
+  <script src="lib/js/angular.min.js"> </script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
