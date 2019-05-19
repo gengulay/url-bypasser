@@ -1,36 +1,25 @@
-var myApp = angular.module('myApp',[]);
+var myApp = angular.module('myApp', []);
 
-myApp.controller('torjackanController', ['$scope', function($scope) {
-  $scope.greeting = 'Hola!';
+myApp.controller('torjackanController', [ '$scope', function($scope) {
+	$scope.greeting = 'Hola!';
 
+	$scope.torjack = function() {
 
-$scope.torjack = function () {
+		if ($scope.name == undefined) {
+			$scope.name = "";
+		}
 
-if($scope.name == undefined) {
-  $scope.name = "";
-}
+		var n = $scope.name.indexOf("patorjack");
 
+		var newString = $scope.name.substr(n)
 
-    var n = $scope.name.indexOf("patorjack");
+		newString = newString.replace(/%2F/g, "/");
 
-    var newString = $scope.name.substr(n)
+		$scope.result = newString;
 
-    newString = newString.replace(/%2F/g, "/");
+		window.open($scope.result, '_blank');
+		$scope.name = "";
 
-    $scope.result = newString;
+	}
 
-    $scope.name="";
-    
-    window.open(newString, '_blank');
-
-
-
-
-}
-
-
-
-
-
-
-}]);
+} ]);
