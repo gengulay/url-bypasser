@@ -17,7 +17,7 @@ myApp.controller('torjackanController', [ '$scope', function($scope) {
 
 		$scope.result = newString;
 
-		window.open($scope.result, '_blank');
+		window.open("http://" + $scope.result, '_blank');
 		$scope.name = "";
 
 	}
