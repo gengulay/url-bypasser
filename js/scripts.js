@@ -20,6 +20,8 @@ if($scope.name == undefined) {
     $scope.result = newString;
 
     $scope.name="";
+    
+    window.open(newString, '_blank');
 
 
 
